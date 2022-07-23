@@ -1,0 +1,28 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<!-- About Section-->
+<section class="page-section bg-primary text-white mb-0" id="about">
+    <div class="container">
+        <!-- About Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-white">Hashtag</h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- About POST Button-->
+        <form method="POST" enctype="multipart/form-data">
+            {{ error_message }}
+            <form method="POSt">
+                {% csrf_token %}
+                <table>
+                    {{ form.as_table }}
+                </table>
+                <input class="btn btn-dark" type="submit" value="제출하기">
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}
