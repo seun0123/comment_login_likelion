@@ -6,7 +6,7 @@ class Post(models.Model):
     pub_date = models.DateTimeField('data published')
     body = models.TextField()
     image = models.ImageField(upload_to='images/', blank = True)
-    hashtags = models.ManyToManyField('Hashtag', blank = True, null = True, editable = True)
+    hashtags = models.ManyToManyField('Hashtag', blank = True, editable = True)
 
     def __str__(self):
         return self.title
@@ -20,6 +20,7 @@ class Comment(models.Model) :
 
 class Hashtag(models.Model) :
     name = models.CharField(max_length=50)
+
 
     def __str__(self) :
         return self.name

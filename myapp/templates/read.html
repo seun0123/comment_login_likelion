@@ -5,7 +5,13 @@
 <section class="page-section bg-primary text-white mb-0" id="about">
     <div class="container">
         <!-- About Section Heading-->
-        <h2 class="page-section-heading text-center text-uppercase text-white">Read</h2><br><br>
+        <h2 class="page-section-heading text-center text-uppercase text-white">Read</h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
         {% for blogs in blogs.all %}
             <h3 style="background-color:#ffc107;"> 제목 : <a href="{% url 'detail' blogs.id %}">{{blogs.title}}</a></h3>
             <p>작성일 : {{blogs.pub_date}}</p><hr>
